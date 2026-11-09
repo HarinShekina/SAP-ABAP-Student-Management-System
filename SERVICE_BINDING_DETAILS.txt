@@ -1,0 +1,10 @@
+Service Binding: ZUI_STUDENT_V2_BINDING
+Binding Type: OData V2
+Status: Published
+Service Definition: ZUI_STUDENT_INFO
+
+Entity Sets:
+ZI_STUDENT_INFO
+ZI_STUDENT_DASHBOARD
+ZI_DEPARTMENT_COUNT
+ZI_DEPARTMENT_HELP

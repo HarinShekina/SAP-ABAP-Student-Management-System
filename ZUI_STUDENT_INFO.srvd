@@ -1,0 +1,6 @@
+@EndUserText.label: 'Student Information Service'
+define service ZUI_STUDENT_INFO {
+  expose ZI_STUDENT_INFO;
+  expose ZI_STUDENT_DASHBOARD;
+  expose ZI_DEPARTMENT_COUNT;
+}
