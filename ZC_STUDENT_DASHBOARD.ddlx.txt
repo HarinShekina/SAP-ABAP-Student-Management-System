@@ -1,0 +1,21 @@
+@Metadata.layer: #CORE
+
+annotate entity ZI_STUDENT_DASHBOARD
+    with
+{
+    @EndUserText.label: 'Statistics ID'
+    @UI.lineItem: [{ position: 10 }]
+    statistics_id;
+
+    @EndUserText.label: 'Total Students'
+    @UI.lineItem: [{ position: 20 }]
+    total_students;
+
+    @EndUserText.label: 'Highest Marks'
+    @UI.lineItem: [{ position: 30 }]
+    highest_marks;
+
+    @EndUserText.label: 'Average Marks'
+    @UI.lineItem: [{ position: 40 }]
+    average_marks;
+}

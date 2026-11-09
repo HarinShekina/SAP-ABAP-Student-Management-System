@@ -1,0 +1,46 @@
+@Metadata.layer: #CORE
+
+annotate entity ZI_STUDENT_INFO
+    with
+{
+    @UI.facet: [
+      {
+        id: 'StudentDetails',
+        purpose: #STANDARD,
+        type: #IDENTIFICATION_REFERENCE,
+        label: 'Student Details',
+        position: 10
+      }
+    ]
+
+    @EndUserText.label: 'Student ID'
+    @UI.lineItem: [{ position: 10 }]
+    @UI.identification: [{ position: 10 }]
+    student_id;
+
+    @EndUserText.label: 'Student Name'
+    @UI.lineItem: [{ position: 20 }]
+    @UI.identification: [{ position: 20 }]
+    student_name;
+
+    @EndUserText.label: 'Department'
+    @Consumption.valueHelpDefinition: [{
+      entity: {
+        name: 'ZI_DEPARTMENT_HELP',
+        element: 'department'
+      }
+    }]
+    @UI.lineItem: [{ position: 30 }]
+    @UI.identification: [{ position: 30 }]
+    department;
+
+    @EndUserText.label: 'Age'
+    @UI.lineItem: [{ position: 40 }]
+    @UI.identification: [{ position: 40 }]
+    age;
+
+    @EndUserText.label: 'Marks'
+    @UI.lineItem: [{ position: 50 }]
+    @UI.identification: [{ position: 50 }]
+    marks;
+}
