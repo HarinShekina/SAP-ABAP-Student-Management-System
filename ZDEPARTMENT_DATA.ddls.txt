@@ -1,0 +1,12 @@
+@EndUserText.label : 'Department Master Data'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #ALLOWED
+define table zdepartment_data {
+
+  key client        : abap.clnt not null;
+  key department_id : abap.char(10) not null;
+  department_name   : abap.char(30);
+
+}

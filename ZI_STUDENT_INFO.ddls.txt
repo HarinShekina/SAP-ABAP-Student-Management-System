@@ -1,0 +1,21 @@
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Student Information View'
+@Metadata.allowExtensions: true
+@Search.searchable: true
+
+define root view entity ZI_STUDENT_INFO
+  as select from zstudent_data
+{
+  key student_id,
+
+  @Search.defaultSearchElement: true
+  student_name,
+
+  @Search.defaultSearchElement: true
+  department,
+
+  age,
+
+  @Search.defaultSearchElement: true
+  marks
+}

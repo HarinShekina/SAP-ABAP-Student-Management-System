@@ -1,0 +1,13 @@
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Student Average Marks'
+
+define view entity ZI_STUDENT_AVERAGE
+  as select from zstudent_data
+{
+  key cast( 'TOTAL' as abap.char(10) ) as statistics_id,
+
+  avg(
+    cast( marks as abap.dec( 15, 2 ) )
+    as abap.dec( 15, 2 )
+  ) as average_marks
+}

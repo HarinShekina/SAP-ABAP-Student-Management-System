@@ -1,0 +1,15 @@
+@EndUserText.label : 'Student Data Table'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #ALLOWED
+define table zstudent_data {
+
+  key client     : abap.clnt not null;
+  key student_id : abap.char(10) not null;
+  student_name   : abap.char(50);
+  department     : abap.char(20);
+  age            : abap.int2;
+  marks          : abap.int4;
+
+}

@@ -1,0 +1,10 @@
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Student Statistics Dashboard'
+
+define view entity ZI_STUDENT_STATS
+  as select from zstudent_data
+{
+  key cast( 'TOTAL' as abap.char(10) ) as statistics_id,
+      count( * ) as total_students,
+      max( marks ) as highest_marks
+}

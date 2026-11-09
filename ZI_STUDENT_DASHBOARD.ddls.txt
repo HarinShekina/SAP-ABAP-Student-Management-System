@@ -1,0 +1,13 @@
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Student Dashboard'
+@Metadata.allowExtensions: true
+define view entity ZI_STUDENT_DASHBOARD
+  as select from ZI_STUDENT_STATS as S
+    inner join ZI_STUDENT_AVERAGE as A
+      on S.statistics_id = A.statistics_id
+{
+  key S.statistics_id,
+      S.total_students,
+      S.highest_marks,
+      A.average_marks
+}

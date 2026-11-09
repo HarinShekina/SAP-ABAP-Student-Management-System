@@ -1,0 +1,10 @@
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@EndUserText.label: 'Department-wise Student Count'
+
+define view entity ZI_DEPARTMENT_COUNT
+  as select from zstudent_data
+{
+  key department,
+      count( * ) as total_students
+}
+group by department
