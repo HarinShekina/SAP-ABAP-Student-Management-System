@@ -1,0 +1,43 @@
+CLASS zcl_load_departments DEFINITION
+  PUBLIC
+  FINAL
+  CREATE PUBLIC.
+
+  PUBLIC SECTION.
+    INTERFACES if_oo_adt_classrun.
+
+ENDCLASS.
+
+
+CLASS zcl_load_departments IMPLEMENTATION.
+
+  METHOD if_oo_adt_classrun~main.
+
+    DATA lt_departments TYPE TABLE OF zdepartment_data.
+
+    lt_departments = VALUE #(
+      ( client = sy-mandt department_id = 'ECE'
+        department_name = 'Electronics and Communication' )
+
+      ( client = sy-mandt department_id = 'CSE'
+        department_name = 'Computer Science' )
+
+      ( client = sy-mandt department_id = 'EEE'
+        department_name = 'Electrical and Electronics' )
+
+      ( client = sy-mandt department_id = 'IT'
+        department_name = 'Information Technology' )
+
+      ( client = sy-mandt department_id = 'MECH'
+        department_name = 'Mechanical Engineering' )
+    ).
+
+    MODIFY zdepartment_data FROM TABLE @lt_departments.
+
+    COMMIT WORK.
+
+    out->write( 'Department records inserted successfully.' ).
+
+  ENDMETHOD.
+
+ENDCLASS.
